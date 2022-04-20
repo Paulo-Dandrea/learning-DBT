@@ -33,7 +33,9 @@ clean-targets:         # directories to be removed by `dbt clean`
 # using the `{{ config(...) }}` macro.
 models:
   dbtlearn:
-      +materialized: view # is the default, but we want to be explicit here
+      +materialized: view # é o default, mas tamos sendo explicitos aqui
       dim:
         +materialized: table
+      src:
+        +materialized: ephemeral # src será como uma CTE
 
