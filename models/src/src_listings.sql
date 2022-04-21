@@ -2,7 +2,10 @@ WITH raw_listings AS (
     SELECT
         *
     FROM
-        {{ {{ source('airbnb', 'listings') }}}}}
+        {{ source(
+            'airbnb',
+            'listings'
+        ) }}
 )
 SELECT
     id AS listing_id,
@@ -16,5 +19,3 @@ SELECT
     updated_at
 FROM
     raw_listings
-
-
