@@ -8,7 +8,7 @@ WITH raw_reviews AS (
         ) }}
 )
 SELECT
-    listing_id review_id,
+    listing_id,
     DATE review_date,
     reviewer_name,
     comments review_text,
